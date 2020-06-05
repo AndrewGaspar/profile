@@ -1,0 +1,21 @@
+spack:
+  specs:
+  - bat
+  - cargo-mpirun
+  - cmake
+  - du-dust
+  - exa
+  - fd-find
+  - git
+  - hyperfine
+  - jql
+  - ninja
+  - ripgrep
+  - rust
+  - starship
+  - tokei
+  - unzip
+  - ytop
+  concretization: together
+  view: true
+  
