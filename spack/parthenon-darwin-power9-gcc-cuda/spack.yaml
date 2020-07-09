@@ -1,0 +1,40 @@
+spack:
+  specs:
+  - catch2
+  - cmake
+  - hdf5
+  - kokkos+aggressive_vectorization+cuda+cuda_lambda+hwloc+openmp+serial+wrapper cuda_arch=70
+    std=14 ^cuda@10.1
+  - python
+  - py-h5py
+  - py-matplotlib
+  - py-numpy
+  concretization: together
+  packages:
+    cuda:
+      modules:
+        cuda@10.1: cuda/10.1
+      version: []
+      target: []
+      compiler: []
+      buildable: true
+      providers: {}
+      paths: {}
+    openmpi:
+      modules:
+        openmpi@4.0.2 %gcc@7.4.0: openmpi/p9/4.0.2-gcc_7.4.0
+      version: []
+      target: []
+      compiler: []
+      buildable: true
+      providers: {}
+      paths: {}
+    all:
+      compiler: [gcc@7.4.0]
+      version: []
+      target: []
+      buildable: true
+      modules: {}
+      providers: {}
+      paths: {}
+  view: true
