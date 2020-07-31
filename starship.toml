@@ -1,0 +1,11 @@
+[git_status]
+disabled = true
+
+[time]
+disabled = false
+
+[custom.spack_env]
+shell = ["bash"]
+command = "basename $SPACK_ENV"
+when = """ test "${SPACK_ENV:-no-env}" != "no-env" """
+prefix = "🔹 "
